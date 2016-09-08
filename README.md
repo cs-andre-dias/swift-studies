@@ -1,2 +1,2 @@
 # swift-studies
-Exercicios em swift
+Exercicios para aprendizado e prática de swift 
