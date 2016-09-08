@@ -356,25 +356,3 @@ var subtract  = {
 subtract(0, 10)
 
 
-enum WeatherType{
-    case Sun
-    case Cloud
-    case Rain
-    case Wind(speed: Int)
-    case Snow
-}
-
-func getHaterStatus(weather: WeatherType) -> String? {
-    switch weather {
-    case .Sun:
-        return nil
-    case .Wind(let speed) where speed < 10:
-        return "meh"
-    case .Cloud, .Wind:
-        return "Dislike"
-    case .Rain, .Snow:
-        return "hate"
-    }
-}
-
-getHaterStatus(WeatherType.Wind(speed: 9))
