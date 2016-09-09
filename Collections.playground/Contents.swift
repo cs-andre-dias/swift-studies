@@ -21,6 +21,8 @@ for i in bucketList{
     print(i)
 }
 
+//Dictionaries
+
 var dict1:Dictionary<String,Int> = ["primeiro": 1, "segundo": 2]
 
 print(dict1["primeiro"])
