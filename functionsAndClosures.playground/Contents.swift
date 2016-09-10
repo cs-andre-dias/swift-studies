@@ -143,3 +143,32 @@ var subtract  = {
 subtract(0, 10)
 
 
+var image = [
+    [3, 7, 10],
+    [6, 2, 9],
+    [0, 1, 5]
+]
+
+print(image.count)
+
+image[0].count
+
+func raiseLowerValuesOfImage(inout image: [[Int]]) {
+    for linha in 0 ..< image.count {
+        for coluna in 0 ..< image[linha].count{
+            print(image[linha][coluna])
+            if(image[linha][coluna] < 5) {
+                image[linha][coluna] = 5
+            }
+        }
+    }
+    image
+}
+
+
+raiseLowerValuesOfImage(&image)
+
+
+
+
+
