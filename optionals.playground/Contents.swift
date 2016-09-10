@@ -34,3 +34,22 @@ if let theOptional = optionalTest, optionalInt = Int(theOptional)
 // e ainda verifica se o resultado dessa conversao e o inteiro 404 com o where
 
 
+var maybeStr: String? = "maybe this be a string"
+
+if let str = maybeStr {
+    print(str)
+}else{
+    print("there is no string")
+}
+
+//guard
+
+func stringuer(str: String?){
+    guard let str = str else{
+        return
+    }
+    print(str.characters.count)
+}
+
+stringuer(maybeStr)
+
