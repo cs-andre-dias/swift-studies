@@ -124,3 +124,36 @@ struct Cuboid {
 let fourByFiveTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
 
 print("The volume of fourByFiveTwo is \(fourByFiveTwo.volume)")
+
+// Property Observers
+
+class StepCounter {
+    var totalSteps: Int = 0 {
+        willSet(newTotalSteps){
+            print("About to set totalSteps to \(newTotalSteps)")
+        }
+        
+        didSet {
+            if totalSteps > oldValue {
+                print("Added \(totalSteps - oldValue) steps")
+            }else{
+                print("You did't walked so much")
+            }
+        }
+    }
+}
+
+
+let stepCounter = StepCounter()
+
+stepCounter.totalSteps = 200
+
+
+stepCounter.totalSteps = 340
+
+stepCounter.totalSteps = 30
+
+stepCounter.totalSteps = 800
+
+
+
