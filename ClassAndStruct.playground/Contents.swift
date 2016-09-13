@@ -109,3 +109,18 @@ let initialSquareCenter = square.center
 square.center = Point(x: 15.0, y: 15.0)
 
 print("square.origin is now at (\(square.origin.x), \(square.origin.y))")
+
+
+//read-only property com get omitido 
+
+
+struct Cuboid {
+    var width  = 0.0, height = 0.0, depth = 0.0
+    var volume: Double {
+        return width * height * depth
+    }
+}
+
+let fourByFiveTwo = Cuboid(width: 4.0, height: 5.0, depth: 2.0)
+
+print("The volume of fourByFiveTwo is \(fourByFiveTwo.volume)")
