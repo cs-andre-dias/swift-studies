@@ -27,5 +27,8 @@ class Vampire: Monster {
         }
         
     }
+    init(){
+        super.init(name: "Dracula")
+    }
     
 }

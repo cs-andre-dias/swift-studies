@@ -12,11 +12,12 @@ class Zombie: Monster {
     }
     
     var walkWithLimp = true
+    private var isFallingApart = false
     
     override func terrorizingTown() {
-        if town?.population >= 0{
+        if town?.population >= 0 && !isFallingApart{
             town?.changePopulation(-10)
-            super.terrorizingTown()
+            super.terrorizingTown() //call the monster implementation
         }else{
             return
         }

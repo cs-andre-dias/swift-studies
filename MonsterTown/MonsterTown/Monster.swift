@@ -8,11 +8,12 @@
 
 
 class Monster {
+    static let isTerrifying = true
     class var makeSpookyNoise: String {
         return "Grr.."
     }
     var town: Town? //Tipo Town mas como optional
-    var name = "Monster"
+    var name: String
     
     var victimPool: Int {
         get {
@@ -29,5 +30,9 @@ class Monster {
         }else{
             print("the city is safe")
         }
+    }
+    
+    init(name: String = "Monster"){
+        self.name = name 
     }
 }

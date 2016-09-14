@@ -18,6 +18,9 @@ var fredTheZombie = Zombie()
 fredTheZombie.town = myTown
 
 print(Zombie.makeSpookyNoise)
+if Zombie.isTerrifying {
+    print("Run away!")
+}
 
 fredTheZombie.terrorizingTown()
 fredTheZombie.town?.printTownDescription()
@@ -26,6 +29,7 @@ fredTheZombie.changeName("Fred The Zombie", walkWithLimp: false)
 
 fredTheZombie.terrorizingTown()
 
+myTown.changePopulation(3000)
 fredTheZombie.town?.printTownDescription()
 
 print("Victim pool: \(fredTheZombie.victimPool)")
@@ -39,8 +43,12 @@ vampire.town = myTown
 vampire.terrorizingTown()
 vampire.terrorizingTown()
 
+print(Vampire.makeSpookyNoise)
+
 vampire.town?.printTownDescription()
 
 print("There are \(vampire.vampireThrall.count) vampires")
+
+print(vampire.name)
 
 
