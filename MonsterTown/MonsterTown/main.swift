@@ -17,6 +17,7 @@ var fredTheZombie = Zombie()
 
 fredTheZombie.town = myTown
 
+print(Monster.makeSpookyNoise)
 print(Zombie.makeSpookyNoise)
 if Zombie.isTerrifying {
     print("Run away!")

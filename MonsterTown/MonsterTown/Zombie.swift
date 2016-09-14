@@ -24,6 +24,7 @@ class Zombie: Monster {
         if town?.population < 0{
             town?.population = 0
         }
+        
     }
     
     func changeName(name: String, walkWithLimp: Bool){
