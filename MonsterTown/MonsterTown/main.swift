@@ -9,13 +9,15 @@
 var myTown = Town()
 let ts = myTown.townSize
 print(ts)
-myTown.changePopulation(200000)
+myTown.changePopulation(2000)
 print("\(myTown.townSize), \(myTown.population)")
 
 
-let fredTheZombie = Zombie()
+var fredTheZombie = Zombie()
 
 fredTheZombie.town = myTown
+
+print(Zombie.makeSpookyNoise)
 
 fredTheZombie.terrorizingTown()
 fredTheZombie.town?.printTownDescription()
@@ -27,5 +29,18 @@ fredTheZombie.terrorizingTown()
 fredTheZombie.town?.printTownDescription()
 
 print("Victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 500
-print("Victim Pool: \(fredTheZombie.victimPool); population: \(fredTheZombie.town?.population)")
+fredTheZombie.victimPool = 30
+print("Victim Pool: \(fredTheZombie.victimPool)")
+
+
+let vampire = Vampire()
+vampire.town = myTown
+
+vampire.terrorizingTown()
+vampire.terrorizingTown()
+
+vampire.town?.printTownDescription()
+
+print("There are \(vampire.vampireThrall.count) vampires")
+
+

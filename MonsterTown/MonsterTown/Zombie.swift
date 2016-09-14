@@ -7,12 +7,15 @@
 //
 
 class Zombie: Monster {
+    override class var makeSpookyNoise: String{ //computed property static definition
+        return "Brains..."
+    }
     
     var walkWithLimp = true
     
     override func terrorizingTown() {
         if town?.population >= 0{
-            town?.changePopulation(11000)
+            town?.changePopulation(-10)
             super.terrorizingTown()
         }else{
             return

@@ -11,6 +11,7 @@
 		731451AC1D78915800DB4C67 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731451AB1D78915800DB4C67 /* Monster.swift */; };
 		731451AE1D7897AB00DB4C67 /* Zombie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731451AD1D7897AB00DB4C67 /* Zombie.swift */; };
 		731451B21D78985600DB4C67 /* Town.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731451B11D78985600DB4C67 /* Town.swift */; };
+		737089321D899AA200FB9001 /* Vampire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737089311D899AA200FB9001 /* Vampire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		731451AB1D78915800DB4C67 /* Monster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		731451AD1D7897AB00DB4C67 /* Zombie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zombie.swift; sourceTree = "<group>"; };
 		731451B11D78985600DB4C67 /* Town.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Town.swift; sourceTree = "<group>"; };
+		737089311D899AA200FB9001 /* Vampire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vampire.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				731451AB1D78915800DB4C67 /* Monster.swift */,
 				731451AD1D7897AB00DB4C67 /* Zombie.swift */,
 				731451B11D78985600DB4C67 /* Town.swift */,
+				737089311D899AA200FB9001 /* Vampire.swift */,
 			);
 			path = MonsterTown;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 				731451A31D7876FE00DB4C67 /* main.swift in Sources */,
 				731451B21D78985600DB4C67 /* Town.swift in Sources */,
 				731451AE1D7897AB00DB4C67 /* Zombie.swift in Sources */,
+				737089321D899AA200FB9001 /* Vampire.swift in Sources */,
 				731451AC1D78915800DB4C67 /* Monster.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +257,7 @@
 				731451A81D7876FE00DB4C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,9 @@
 
 
 class Monster {
+    class var makeSpookyNoise: String {
+        return "Grr.."
+    }
     var town: Town? //Tipo Town mas como optional
     var name = "Monster"
     

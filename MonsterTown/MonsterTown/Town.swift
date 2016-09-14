@@ -7,8 +7,12 @@
 //
 
 struct Town {
-    let region = "South"
-    var population = 0
+    static let region = "South"
+    var population = 0 {
+        didSet(oldPopulation){
+            print("the population has changed from \(oldPopulation) to \(population)")
+        }
+    }
     var numberOfStopLights = 4
     
     enum Size {
