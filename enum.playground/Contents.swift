@@ -60,21 +60,37 @@ print(tempAtual)
 enum ShapeDimensions {
     case Square(Double)
     case Rectangle(width: Double, height: Double)
+    case Perimeter(up: Double, left: Double, right: Double, down: Double)
+    case Point
+    
     
     func area() -> Double {
         switch self {
+        case .Point:
+            return 0
+            
         case let .Square(side):
             return side * side
             
         case let .Rectangle(width: w, height: h):
             return w * h
+            
+        case let .Perimeter(up: u, left: l, right: r, down: d):
+            return u + l + r + d
         }
     }
 }
 
 var squareArea = ShapeDimensions.Square(20.0)
+var rectShape = ShapeDimensions.Rectangle(width: 5.0, height: 10.0)
+var pointShape = ShapeDimensions.Point
+var perimeterArea = ShapeDimensions.Perimeter(up: 10.0, left: 20.0, right: 5.0, down: 8.0)
 
-print(squareArea.area())
+print("Square's area = \(squareArea.area())")
+print("Rectangle's area = \(rectShape.area())")
+print("Point's area = \(pointShape.area())")
+print("Perimeter's area = \(perimeterArea.area())")
+
 
 
 
