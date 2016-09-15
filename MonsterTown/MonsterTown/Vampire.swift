@@ -27,8 +27,8 @@ class Vampire: Monster {
         }
         
     }
-    init(){
-        super.init(name: "Dracula")
+    required init(town: Town?, monsterName: String){
+        super.init(town: town, monsterName: monsterName)
     }
     
 }

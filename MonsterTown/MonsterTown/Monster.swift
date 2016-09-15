@@ -24,15 +24,17 @@ class Monster {
         }
     }
     
+    required init(town: Town?, monsterName: String){
+        name = monsterName
+        self.town = town
+    }
+
+    
     func terrorizingTown(){
         if town != nil{
             print("\(name) is terrorizing the town")
         }else{
             print("the city is safe")
         }
-    }
-    
-    init(name: String = "Monster"){
-        self.name = name 
     }
 }

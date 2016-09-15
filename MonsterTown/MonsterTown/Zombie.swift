@@ -13,10 +13,28 @@ class Zombie: Monster {
         return "Brains..."
     }
     
-    var walkWithLimp = true
-    private var isFallingApart = false
+    var walkWithLimp: Bool
+    private(set) var isFallingApart: Bool
     
-    override func terrorizingTown() {
+    required init(limp: Bool, fallingApart: Bool, town: Town?, monsterName: String){
+        walkWithLimp = limp
+        isFallingApart = fallingApart
+        super.init(town: town, monsterName: monsterName)
+    }
+    convenience init(limp: Bool, fallingApart: Bool){
+        self.init(limp: limp, fallingApart: fallingApart, town: nil, monsterName: "Fred")
+        if walkWithLimp{
+            print("This zombie has a bad knee")
+        }
+    }
+    
+    required init(town: Town?, monsterName: String){
+        walkWithLimp = false
+        isFallingApart = false
+        super.init(town: town, monsterName: monsterName)
+    }
+    
+    final override func terrorizingTown() {
         if town?.population >= 0 && !isFallingApart{
             town?.changePopulation(-10)
             super.terrorizingTown() //call the monster implementation
@@ -35,5 +53,9 @@ class Zombie: Monster {
     func changeName(name: String, walkWithLimp: Bool){
         self.name = name
         self.walkWithLimp = walkWithLimp
+    }
+    
+    deinit {
+        print("Zombie named \(name), is no longer with us.")
     }
 }

@@ -7,49 +7,51 @@
 //
 
 var myTown = Town(region: "West", population: 10000, stopLights: 6)
-let ts = myTown.townSize
+let ts = myTown?.townSize
 print(ts)
-myTown.changePopulation(2000)
-print("\(myTown.townSize), \(myTown.population)")
+myTown?.changePopulation(2000)
+print("\(myTown?.townSize), \(myTown?.population)")
 
 
-var fredTheZombie = Zombie()
+var fredTheZombie: Zombie? = Zombie(limp: false, fallingApart: false, town: myTown, monsterName: "Fred")
 
-fredTheZombie.town = myTown
+var convenientZombie = Zombie(limp: true, fallingApart: false)
 
 print(Monster.makeSpookyNoise)
 print(Zombie.makeSpookyNoise)
 if Zombie.isTerrifying {
-    print("Run away!")
+    print("Run away! ")
 }
-
-fredTheZombie.terrorizingTown()
-fredTheZombie.town?.printTownDescription()
-
-fredTheZombie.changeName("Fred The Zombie", walkWithLimp: false)
-
-fredTheZombie.terrorizingTown()
-
-myTown.changePopulation(3000)
-fredTheZombie.town?.printTownDescription()
-
-print("Victim pool: \(fredTheZombie.victimPool)")
-fredTheZombie.victimPool = 30
-print("Victim Pool: \(fredTheZombie.victimPool)")
+fredTheZombie = nil
 
 
-let vampire = Vampire()
-vampire.town = myTown
+fredTheZombie?.terrorizingTown()
+fredTheZombie?.town?.printTownDescription()
 
-vampire.terrorizingTown()
-vampire.terrorizingTown()
+fredTheZombie?.changeName("Fred The Zombie", walkWithLimp: false)
 
-print(Vampire.makeSpookyNoise)
+fredTheZombie?.terrorizingTown()
 
-vampire.town?.printTownDescription()
+myTown?.changePopulation(3000)
+fredTheZombie?.town?.printTownDescription()
 
-print("There are \(vampire.vampireThrall.count) vampires")
+print("Victim pool: \(fredTheZombie?.victimPool)")
+fredTheZombie?.victimPool = 30
+print("Victim Pool: \(fredTheZombie?.victimPool)")
 
-print(vampire.name)
+
+//let vampire = Vampire()
+//vampire.town = myTown
+//
+//vampire.terrorizingTown()
+//vampire.terrorizingTown()
+//
+//print(Vampire.makeSpookyNoise)
+//
+//vampire.town?.printTownDescription()
+//
+//print("There are \(vampire.vampireThrall.count) vampires")
+//
+//print(vampire.name)
 
 
