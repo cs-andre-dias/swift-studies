@@ -7,6 +7,8 @@
 //
 
 class Zombie: Monster {
+    var mayor = Mayor()
+    
     override class var makeSpookyNoise: String{ //computed property static definition
         return "Brains..."
     }
@@ -18,6 +20,9 @@ class Zombie: Monster {
         if town?.population >= 0 && !isFallingApart{
             town?.changePopulation(-10)
             super.terrorizingTown() //call the monster implementation
+            print(mayor.pronunciation)
+            mayor.anxietyLevel += 1
+            print("The anxiety level of mayor is \(mayor.anxietyLevel)")
         }else{
             return
         }

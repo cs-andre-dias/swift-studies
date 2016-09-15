@@ -8,10 +8,9 @@
 
 struct Town {
     private var anxietyLevel: Int = 0
-    static let region = "South"
+    let region = "South"
     var population = 0 {
         didSet(oldPopulation){
-            print(Mayor.pronunciation)
             if population > oldPopulation {
                 print("Segue o jogo")
             }else{
