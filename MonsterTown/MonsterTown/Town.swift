@@ -7,21 +7,25 @@
 //
 
 struct Town {
-    private var anxietyLevel: Int = 0
-    let region = "South"
-    var population = 0 {
+    var mayor = Mayor(anxietyLevel: 0)
+    let region: String
+    var population: Int{
         didSet(oldPopulation){
             if population > oldPopulation {
                 print("Segue o jogo")
             }else{
                 print("the population has changed from \(oldPopulation) to \(population)")
-                anxietyLevel += 1
-                print("The anxiety level of mayor is \(anxietyLevel)")
             }
             
         }
     }
-    var numberOfStopLights = 4
+    var numberOfStopLights: Int
+    
+    init(region: String, population: Int, stopLights: Int){
+        self.region = region
+        self.population = population
+        self.numberOfStopLights = stopLights
+    }
     
     enum Size {
         case Small
@@ -42,7 +46,7 @@ struct Town {
     }
     
     func printTownDescription(){
-        print("Population: \(population), number of stoplights: \(numberOfStopLights)")
+        print("Population: \(population), number of stoplights: \(numberOfStopLights), region: \(region)")
     }
     
     mutating func changePopulation(amount:Int){

@@ -7,7 +7,7 @@
 //
 
 class Zombie: Monster {
-    var mayor = Mayor()
+    var mayor = Mayor(anxietyLevel: 0)
     
     override class var makeSpookyNoise: String{ //computed property static definition
         return "Brains..."

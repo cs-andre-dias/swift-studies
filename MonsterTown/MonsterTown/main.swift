@@ -6,7 +6,7 @@
 //  Copyright © 2016 Andre Dias. All rights reserved.
 //
 
-var myTown = Town()
+var myTown = Town(region: "West", population: 10000, stopLights: 6)
 let ts = myTown.townSize
 print(ts)
 myTown.changePopulation(2000)
