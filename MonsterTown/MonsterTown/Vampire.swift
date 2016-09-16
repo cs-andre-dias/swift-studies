@@ -30,5 +30,6 @@ class Vampire: Monster {
     required init(town: Town?, monsterName: String){
         super.init(town: town, monsterName: monsterName)
     }
+
     
 }

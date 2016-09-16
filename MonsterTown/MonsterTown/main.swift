@@ -40,18 +40,17 @@ fredTheZombie?.victimPool = 30
 print("Victim Pool: \(fredTheZombie?.victimPool)")
 
 
-//let vampire = Vampire()
-//vampire.town = myTown
-//
-//vampire.terrorizingTown()
-//vampire.terrorizingTown()
-//
-//print(Vampire.makeSpookyNoise)
-//
-//vampire.town?.printTownDescription()
-//
-//print("There are \(vampire.vampireThrall.count) vampires")
-//
-//print(vampire.name)
+let vampire = Vampire(town: myTown, monsterName: "Dracula")
+
+vampire.terrorizingTown()
+vampire.terrorizingTown()
+
+print(Vampire.makeSpookyNoise)
+
+vampire.town?.printTownDescription()
+
+print("There are \(vampire.vampireThrall.count) vampires")
+
+print(vampire.name)
 
 
